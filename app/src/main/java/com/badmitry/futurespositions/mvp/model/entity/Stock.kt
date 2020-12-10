@@ -5,9 +5,8 @@ import com.google.gson.annotations.Expose
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class Future(
+class Stock(
     @Expose val orgId: String,
     @Expose val shortName: String,
-    @Expose var title: String,
-    @Expose var shortNameOfStock: String
+    @Expose val name: String
 ) : Parcelable
