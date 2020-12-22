@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_future_name"
+            android:gravity="center_horizontal"
+            android:textSize="30sp"/>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart_stock_prices"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="03"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/progress_prices"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="03">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/progress_physical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="03">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/progress_juridical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="03">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/juridical_bar_chart"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="03"
+            android:visibility="gone" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/physical_bar_chart"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="03"
+            android:visibility="gone" />
+    </LinearLayout>
+</layout>

@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">futurespositions</string>
+    <string name="reload_data">Загрузить данные</string>
+    <string name="fail_load_data">Данные не были загружены, попробуйте снова.</string>
+    <string name="choose_future">Выберите фьючерс</string>
 </resources>

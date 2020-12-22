@@ -1,13 +1,21 @@
 package com.badmitry.futurespositions.mvp.model.entity
 
 import android.os.Parcelable
-import com.google.gson.annotations.Expose
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class Future(
-    @Expose val orgId: String,
-    @Expose val shortName: String,
-    @Expose var title: String,
-    @Expose var shortNameOfStock: String
-) : Parcelable
+    val emitentId: String,
+    val shortName: String,
+    var title: String = "",
+    var stockName: String = ""
+) : Parcelable {
+    override fun equals(other: Any?): Boolean {
+        when (other) {
+            is Future -> {
+                return this.emitentId == other.emitentId && this.shortName == other.shortName
+            }
+            else -> return false
+        }
+    }
+}
