@@ -4,6 +4,10 @@ import android.app.Application
 import com.badmitry.futurespositions.di.AppComponent
 import com.badmitry.futurespositions.di.DaggerAppComponent
 import com.badmitry.futurespositions.di.modules.AppModule
+import io.reactivex.rxjava3.plugins.RxJavaPlugins
+
+
+
 
 class App: Application() {
     companion object {
@@ -15,6 +19,7 @@ class App: Application() {
 
     override fun onCreate() {
         super.onCreate()
+        RxJavaPlugins.setErrorHandler { throwable: Throwable? -> {} }
         instance = this
         _appComponent = DaggerAppComponent.builder()
             .appModule(AppModule(this))

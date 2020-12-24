@@ -8,10 +8,12 @@ import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
+import okhttp3.Protocol
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.*
 import java.util.concurrent.TimeUnit
 import javax.inject.Named
 import javax.inject.Singleton
@@ -38,6 +40,7 @@ class ApiModule {
     @Provides
     fun client() = OkHttpClient.Builder()
         .callTimeout(60, TimeUnit.SECONDS)
+        .protocols(Collections.singletonList(Protocol.HTTP_1_1))
         .addNetworkInterceptor(HttpLoggingInterceptor().apply {
             level = HttpLoggingInterceptor.Level.HEADERS
         })
