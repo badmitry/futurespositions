@@ -59,7 +59,7 @@ class GraphFragment : MvpAppCompatFragment(), IGraphView, BackBtnListener {
         for (i in listPrices.indices) {
             listEntry.add(Entry(i.toFloat(), listPrices[i].price.toFloat()))
         }
-        val dataSet = LineDataSet(listEntry, "График цены за год")
+        val dataSet = LineDataSet(listEntry, getString(R.string.graph_price_year))
         val colorLime = context?.let { ContextCompat.getColor(it, R.color.lime) }
         colorLime?.let { dataSet.color = colorLime }
         dataSet.setDrawCircles(false)
@@ -87,7 +87,7 @@ class GraphFragment : MvpAppCompatFragment(), IGraphView, BackBtnListener {
             )
         }
         val dataSetJuridicalPositionShort =
-            BarDataSet(listEntryJuridicalPositionShort, "Шортовые позиции юридических лиц")
+            BarDataSet(listEntryJuridicalPositionShort, getString(R.string.juridical_short_positions))
         dataSetJuridicalPositionShort.setDrawValues(false)
         colorRed?.let { dataSetJuridicalPositionShort.setColor(colorRed) }
 
@@ -101,7 +101,7 @@ class GraphFragment : MvpAppCompatFragment(), IGraphView, BackBtnListener {
             )
         }
         val dataSetJuridicalPositionLong =
-            BarDataSet(listEntryJuridicalPositionLong, "Лонговые позиции юридических лиц")
+            BarDataSet(listEntryJuridicalPositionLong, getString(R.string.juridical_long_positions))
         dataSetJuridicalPositionLong.setDrawValues(false)
 
         val dataJuridicalPosition = BarData(
@@ -119,7 +119,7 @@ class GraphFragment : MvpAppCompatFragment(), IGraphView, BackBtnListener {
             )
         }
         val dataSetPhysicalPositionLong =
-            BarDataSet(listEntryPhysicalPositionLong, "Шортовые позиции физических лиц")
+            BarDataSet(listEntryPhysicalPositionLong, getString(R.string.physical_long_positions))
         dataSetPhysicalPositionLong.setDrawValues(false)
 
         val listEntryPhysicalPositionShort = mutableListOf<BarEntry>()
@@ -132,7 +132,7 @@ class GraphFragment : MvpAppCompatFragment(), IGraphView, BackBtnListener {
             )
         }
         val dataSetPhysicalPositionShort =
-            BarDataSet(listEntryPhysicalPositionShort, "Лонговые позиции физических лиц")
+            BarDataSet(listEntryPhysicalPositionShort, getString(R.string.physical_short_positions))
         dataSetPhysicalPositionShort.setDrawValues(false)
         colorRed?.let { dataSetPhysicalPositionShort.setColor(colorRed) }
 

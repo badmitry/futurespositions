@@ -4,7 +4,6 @@ import com.badmitry.futurespositions.mvp.view.IMainView
 import com.badmitry.futurespositions.navigation.Screens
 import moxy.MvpPresenter
 import ru.terrakok.cicerone.Router
-import ru.terrakok.cicerone.Screen
 import javax.inject.Inject
 
 class MainPresenter(val isConnecting: Boolean): MvpPresenter<IMainView>() {

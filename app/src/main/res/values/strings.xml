@@ -3,4 +3,10 @@
     <string name="reload_data">Загрузить данные</string>
     <string name="fail_load_data">Данные не были загружены, попробуйте снова.</string>
     <string name="choose_future">Выберите фьючерс</string>
+    <string name="graph_price_year">График цены за год</string>
+    <string name="juridical_short_positions">Шортовые позиции юридических лиц</string>
+    <string name="juridical_long_positions">Лонговые позиции юридических лиц</string>
+    <string name="physical_short_positions">Лонговые позиции физических лиц</string>
+    <string name="physical_long_positions">Шортовые позиции физических лиц</string>
+
 </resources>
